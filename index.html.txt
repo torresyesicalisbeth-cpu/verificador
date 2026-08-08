@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Documento</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f7f9; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; width: 100%; max-width: 400px; padding: 20px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .status-valid { background-color: #28a745; color: white; padding: 15px; text-align: center; border-radius: 8px; font-weight: bold; margin-bottom: 20px; }
+        .info-box { border: 1px solid #e0e0e0; padding: 15px; border-radius: 8px; margin-bottom: 20px; background: #f9fbff; }
+        .label { color: #555; font-size: 0.9em; margin-bottom: 5px; }
+        .value { color: #333; font-weight: 600; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="status-valid">✔ Válido</div>
+        <div class="info-box">
+            <div class="label">Firmante</div>
+            <div class="value">FUNDACIÓN UNIVERSITARIA DEL ÁREA ANDINA</div>
+            <div class="label">Fecha</div>
+            <div class="value">20/01/2023</div>
+        </div>
+        <div style="text-align: center;">
+            <p>Código Seguro de Verificación:</p>
+            <h3>hRBNMOoAhQR3GtLA</h3>
+        </div>
+    </div>
+</body>
+</html>
