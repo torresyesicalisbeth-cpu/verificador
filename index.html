@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Validación - Areandina</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-box {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        .login-box img {
+            width: 150px;
+            margin-bottom: 20px;
+        }
+        .login-box h2 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .login-box p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        input[type="text"] {
+            width: 90%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #005b9f;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover {
+            background-color: #004275;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <!-- Puedes cambiar esta URL por el logo de Areandina si tienes uno subido -->
+        <h2>Consulta de Registro Académico</h2>
+        <p>Ingrese el número de documento de identidad del egresado o el código del diploma para verificar su autenticidad.</p>
+        
+        <input type="text" id="documento" placeholder="Ej: 1023456789">
+        
+        <button onclick="buscarValidacion()">Validar Documento</button>
+    </div>
+
+    <script>
+        function buscarValidacion() {
+            // Obtiene lo que el usuario escribió
+            var numero = document.getElementById("documento").value.trim();
+            
+            if(numero !== "") {
+                // Redirige a la página que se llama igual al número ingresado
+                window.location.href = numero + ".html";
+            } else {
+                alert("Por favor, ingrese un número de documento válido.");
+            }
+        }
+    </script>
+
+</body>
+</html>
