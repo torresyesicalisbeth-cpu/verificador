@@ -17,9 +17,8 @@
             flex-direction: column;
             min-height: 100vh;
         }
-        /* Encabezado Verde Areandina */
         header {
-            background-color: #72bf44; /* Verde institucional Areandina */
+            background-color: #72bf44;
             color: white;
             padding: 15px 30px;
             display: flex;
@@ -40,7 +39,6 @@
             font-weight: bold;
             text-transform: uppercase;
         }
-        /* Contenedor Principal */
         .main-container {
             flex: 1;
             display: flex;
@@ -58,17 +56,26 @@
             text-align: center;
             border-top: 6px solid #72bf44;
         }
-        .logo-container {
-            margin-bottom: 20px;
+        /* Estilo tipográfico institucional superior al logo */
+        .brand-logo-text {
+            color: #72bf44;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
         }
-        .logo-container img {
-            max-width: 200px;
-            height: auto;
+        .brand-subtext {
+            color: #555555;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            font-weight: 600;
         }
         .validation-card h1 {
             color: #333333;
-            font-size: 20px;
-            margin-bottom: 12px;
+            font-size: 19px;
+            margin-bottom: 10px;
             font-weight: 700;
         }
         .validation-card p {
@@ -120,7 +127,6 @@
         button:hover {
             background-color: #5ea435;
         }
-        /* Pie de página */
         footer {
             background-color: #ffffff;
             color: #888888;
@@ -133,34 +139,30 @@
 </head>
 <body>
 
-    <!-- Cabecera Oficial Verde -->
     <header>
         <div class="header-title">Portal Institucional</div>
         <div class="institution-tag">Verificación de Títulos</div>
     </header>
 
-    <!-- Caja de Consulta -->
     <div class="main-container">
         <div class="validation-card">
             
-            <!-- Logo Oficial de Areandina -->
-            <div class="logo-container">
-                <img src="logo-areandina.png" alt="Fundación Universitaria del Área Andina">
-            </div>
+            <!-- Encabezado Institucional Limpio -->
+            <div class="brand-logo-text">AREANDINA</div>
+            <div class="brand-subtext">Fundación Universitaria del Área Andina</div>
 
             <h1>Consulta de Registro Académico</h1>
             <p>Ingrese el número de documento de identidad del graduado para consultar el estado y la autenticidad del título oficial.</p>
             
             <div class="form-group">
                 <label for="documento">Número de Documento</label>
-                <input type="text" id="documento" placeholder="Ej: 1023456789">
+                <input type="text" id="documento" placeholder="Ej: 11276189">
             </div>
             
             <button onclick="buscarValidacion()">Consultar Registro</button>
         </div>
     </div>
 
-    <!-- Pie de Página -->
     <footer>
         &copy; 2026 Fundación Universitaria del Área Andina &bull; Todos los derechos reservados.
     </footer>
