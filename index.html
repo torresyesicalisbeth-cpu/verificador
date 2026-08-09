@@ -3,86 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal de Validación - Areandina</title>
+    <title>Sistema de Validación de Títulos - Areandina</title>
     <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f6f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Barra Institucional Superior */
+        header {
+            background-color: #002b49;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #e31b23;
+        }
+        .logo-text {
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+        }
+        .institution-tag {
+            font-size: 12px;
+            background: rgba(255,255,255,0.15);
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+        /* Contenido Principal */
+        .main-container {
+            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            padding: 20px;
         }
-        .login-box {
+        .validation-card {
             background: white;
             padding: 40px;
             border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             width: 100%;
-            max-width: 400px;
+            max-width: 480px;
+            text-align: left;
+            border-top: 4px solid #002b49;
         }
-        .login-box img {
-            width: 150px;
-            margin-bottom: 20px;
-        }
-        .login-box h2 {
-            color: #333;
-            font-size: 20px;
+        .validation-card h1 {
+            color: #002b49;
+            font-size: 22px;
             margin-bottom: 10px;
         }
-        .login-box p {
-            color: #666;
+        .validation-card p {
+            color: #555;
             font-size: 14px;
             margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+            text-transform: uppercase;
         }
         input[type="text"] {
-            width: 90%;
-            padding: 12px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccd0d5;
             border-radius: 4px;
-            font-size: 16px;
+            font-size: 15px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus {
+            border-color: #002b49;
         }
         button {
-            background-color: #005b9f;
+            background-color: #e31b23;
             color: white;
             border: none;
             padding: 12px 20px;
             border-radius: 4px;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: bold;
             cursor: pointer;
             width: 100%;
-            font-weight: bold;
+            transition: background-color 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         button:hover {
-            background-color: #004275;
+            background-color: #c5141c;
+        }
+        /* Pie de página institucional */
+        footer {
+            background-color: #ffffff;
+            color: #666;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+            border-top: 1px solid #e1e4e8;
         }
     </style>
 </head>
 <body>
 
-    <div class="login-box">
-        <!-- Puedes cambiar esta URL por el logo de Areandina si tienes uno subido -->
-        <h2>Consulta de Registro Académico</h2>
-        <p>Ingrese el número de documento de identidad del egresado o el código del diploma para verificar su autenticidad.</p>
-        
-        <input type="text" id="documento" placeholder="Ej: 1023456789">
-        
-        <button onclick="buscarValidacion()">Validar Documento</button>
+    <!-- Cabecera Oficial -->
+    <header>
+        <div class="logo-text">AREANDINA</div>
+        <div class="institution-tag">Verificación de Títulos Oficiales</div>
+    </header>
+
+    <!-- Caja Central de Consulta -->
+    <div class="main-container">
+        <div class="validation-card">
+            <h1>Portal de Validación Académica</h1>
+            <p>Ingrese el número de documento de identidad del graduado para consultar el estado y la autenticidad del título oficial registrado.</p>
+            
+            <div class="form-group">
+                <label for="documento">Número de Documento</label>
+                <input type="text" id="documento" placeholder="Ej: 1023456789">
+            </div>
+            
+            <button onclick="buscarValidacion()">Consultar Registro</button>
+        </div>
     </div>
+
+    <!-- Pie de Página -->
+    <footer>
+        &copy; 2026 Sistema de Validación Académica Segura &bull; Todos los derechos reservados.
+    </footer>
 
     <script>
         function buscarValidacion() {
-            // Obtiene lo que el usuario escribió
             var numero = document.getElementById("documento").value.trim();
             
             if(numero !== "") {
-                // Redirige a la página que se llama igual al número ingresado
+                // Redirige al archivo del estudiante correspondiente
                 window.location.href = numero + ".html";
             } else {
-                alert("Por favor, ingrese un número de documento válido.");
+                alert("Por favor, ingrese un número de documento válido para realizar la consulta.");
             }
         }
     </script>
