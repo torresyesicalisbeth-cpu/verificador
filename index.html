@@ -12,34 +12,35 @@
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
+            background-color: #f4f6f8;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-        /* Barra Institucional Superior */
+        /* Encabezado Verde Areandina */
         header {
-            background-color: #002b49;
+            background-color: #72bf44; /* Verde institucional Areandina */
             color: white;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 4px solid #e31b23;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .logo-text {
-            font-size: 20px;
-            font-weight: bold;
+        .header-title {
+            font-size: 18px;
+            font-weight: 600;
             letter-spacing: 0.5px;
         }
         .institution-tag {
             font-size: 12px;
-            background: rgba(255,255,255,0.15);
-            padding: 4px 10px;
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
             text-transform: uppercase;
         }
-        /* Contenido Principal */
+        /* Contenedor Principal */
         .main-container {
             flex: 1;
             display: flex;
@@ -49,89 +50,106 @@
         }
         .validation-card {
             background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.08);
             width: 100%;
-            max-width: 480px;
-            text-align: left;
-            border-top: 4px solid #002b49;
+            max-width: 450px;
+            text-align: center;
+            border-top: 6px solid #72bf44;
+        }
+        .logo-container {
+            margin-bottom: 20px;
+        }
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
         }
         .validation-card h1 {
-            color: #002b49;
-            font-size: 22px;
-            margin-bottom: 10px;
+            color: #333333;
+            font-size: 20px;
+            margin-bottom: 12px;
+            font-weight: 700;
         }
         .validation-card p {
-            color: #555;
-            font-size: 14px;
+            color: #666666;
+            font-size: 13.5px;
             margin-bottom: 25px;
             line-height: 1.5;
         }
         .form-group {
+            text-align: left;
             margin-bottom: 20px;
         }
         label {
             display: block;
-            font-size: 13px;
-            font-weight: bold;
-            color: #333;
+            font-size: 12px;
+            font-weight: 700;
+            color: #444444;
             margin-bottom: 8px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         input[type="text"] {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid #ccd0d5;
-            border-radius: 4px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
             font-size: 15px;
             outline: none;
-            transition: border-color 0.2s;
+            transition: all 0.2s ease;
         }
         input[type="text"]:focus {
-            border-color: #002b49;
+            border-color: #72bf44;
+            box-shadow: 0 0 5px rgba(114, 191, 68, 0.4);
         }
         button {
-            background-color: #e31b23;
+            background-color: #72bf44;
             color: white;
             border: none;
-            padding: 12px 20px;
-            border-radius: 4px;
+            padding: 13px 20px;
+            border-radius: 6px;
             font-size: 15px;
             font-weight: bold;
             cursor: pointer;
             width: 100%;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s ease;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
         button:hover {
-            background-color: #c5141c;
+            background-color: #5ea435;
         }
-        /* Pie de página institucional */
+        /* Pie de página */
         footer {
             background-color: #ffffff;
-            color: #666;
+            color: #888888;
             text-align: center;
             padding: 15px;
             font-size: 12px;
-            border-top: 1px solid #e1e4e8;
+            border-top: 1px solid #e5e5e5;
         }
     </style>
 </head>
 <body>
 
-    <!-- Cabecera Oficial -->
+    <!-- Cabecera Oficial Verde -->
     <header>
-        <div class="logo-text">AREANDINA</div>
-        <div class="institution-tag">Verificación de Títulos Oficiales</div>
+        <div class="header-title">Portal Institucional</div>
+        <div class="institution-tag">Verificación de Títulos</div>
     </header>
 
-    <!-- Caja Central de Consulta -->
+    <!-- Caja de Consulta -->
     <div class="main-container">
         <div class="validation-card">
-            <h1>Portal de Validación Académica</h1>
-            <p>Ingrese el número de documento de identidad del graduado para consultar el estado y la autenticidad del título oficial registrado.</p>
+            
+            <!-- Logo Oficial de Areandina -->
+            <div class="logo-container">
+                <img src="logo-areandina.png" alt="Fundación Universitaria del Área Andina">
+            </div>
+
+            <h1>Consulta de Registro Académico</h1>
+            <p>Ingrese el número de documento de identidad del graduado para consultar el estado y la autenticidad del título oficial.</p>
             
             <div class="form-group">
                 <label for="documento">Número de Documento</label>
@@ -144,7 +162,7 @@
 
     <!-- Pie de Página -->
     <footer>
-        &copy; 2026 Sistema de Validación Académica Segura &bull; Todos los derechos reservados.
+        &copy; 2026 Fundación Universitaria del Área Andina &bull; Todos los derechos reservados.
     </footer>
 
     <script>
@@ -152,10 +170,9 @@
             var numero = document.getElementById("documento").value.trim();
             
             if(numero !== "") {
-                // Redirige al archivo del estudiante correspondiente
                 window.location.href = numero + ".html";
             } else {
-                alert("Por favor, ingrese un número de documento válido para realizar la consulta.");
+                alert("Por favor, ingrese un número de documento válido.");
             }
         }
     </script>
