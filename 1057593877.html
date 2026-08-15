@@ -2,49 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Diploma de Deicy Jineth Perez Cardenas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Título - Areandina</title>
     <style>
-        body { font-family: 'Georgia', serif; background-color: #f0f0f0; padding: 20px; }
-        .diploma { 
-            background: white; 
-            max-width: 800px; 
-            margin: auto; 
-            padding: 60px; 
-            border: 2px solid #ddd;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f4f6f8; margin: 0; padding: 20px; }
+        .diploma-card { 
+            background: white; max-width: 700px; margin: 20px auto; padding: 40px; 
+            border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 8px solid #72bf44;
         }
-        .header-img { width: 150px; margin-bottom: 20px; }
-        h1 { color: #72bf44; font-size: 24px; margin-bottom: 5px; }
-        h2 { color: #333; margin-top: 30px; }
-        .datos { margin: 40px 0; line-height: 1.6; }
-        .firmas-img { width: 100%; max-width: 500px; margin-top: 40px; }
-        .footer-info { margin-top: 40px; font-size: 11px; color: #777; border-top: 1px solid #eee; padding-top: 20px; }
+        .header-status { background: #72bf44; color: white; padding: 10px; text-align: center; font-weight: bold; border-radius: 5px; margin-bottom: 30px; text-transform: uppercase; }
+        .logo-box { text-align: center; margin-bottom: 25px; }
+        .logo-box img { width: 180px; height: auto; }
+        h1 { color: #333; font-size: 21px; text-align: center; margin-bottom: 30px; }
+        .data-grid { text-align: left; line-height: 1.8; color: #444; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+        .label { font-weight: bold; color: #72bf44; display: block; margin-top: 15px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .value { font-size: 16px; }
+        
+        /* Sección de firmas profesional (en texto, no imagen) */
+        .signatures-section { margin-top: 40px; text-align: center; font-size: 12px; color: #555; }
+        .signatures-container { display: flex; justify-content: space-around; margin-top: 50px; }
+        .signature-line { border-top: 1px solid #999; width: 200px; padding-top: 10px; margin: auto; }
+        .signature-title { font-weight: bold; margin-top: 5px; text-transform: uppercase; }
+        .footer-legal { margin-top: 30px; font-size: 10px; color: #888; }
     </style>
 </head>
 <body>
 
-    <div class="diploma">
-        <!-- Imagen del Escudo -->
-        <img src="escudo.png" alt="Logo" class="header-img">
+    <div class="diploma-card">
+        <div class="header-status">✓ DOCUMENTO VÁLIDO Y LICENCIADO</div>
         
-        <h1>FUNDACIÓN UNIVERSITARIA DEL ÁREA ANDINA</h1>
-        <p>Certifica que:</p>
-        
-        <h2>DEICY JINETH PEREZ CARDENAS</h2>
-        <p>C.C. No. 1057593877</p>
-
-        <div class="datos">
-            <p>Aprobó los estudios de formación avanzada y cumplió los requisitos exigidos, obteniendo el título de:</p>
-            <h2 style="color: #72bf44;">PROFESIONAL EN SEGURIDAD Y SALUD EN EL TRABAJO</h2>
-            <p>Dado en Bogotá D.C., el 7 de Diciembre de 2001</p>
+        <div class="logo-box">
+            <!-- Aquí se usará tu única imagen subida -->
+            <img src="escudo.png" alt="Escudo Areandina">
         </div>
 
-        <!-- Imagen de las Firmas -->
-        <img src="firmas.png" alt="Firmas" class="firmas-img">
+        <h1>Visualización del Título Original</h1>
 
-        <div class="footer-info">
-            <p>Tomo 1 - Folio 37 - Registro 2357 - Acta No. 922</p>
-            <p>Código de Seguridad: 2728 - AA - 027081</p>
+        <div class="data-grid">
+            <span class="label">NOMBRE DEL GRADUADO</span>
+            <div class="value">DEICY JINETH PEREZ CARDENAS</div>
+
+            <span class="label">DOCUMENTO DE IDENTIDAD</span>
+            <div class="value">1057593877</div>
+
+            <span class="label">PROGRAMA ACADÉMICO</span>
+            <div class="value">PROFESIONAL EN SEGURIDAD Y SALUD EN EL TRABAJO</div>
+
+            <span class="label">ACTA DE GRADO / REGISTRO</span>
+            <div class="value">Acta No. 922 - Registro 2357</div>
+        </div>
+
+        <!-- SECCIÓN DE FIRMAS (ESCRITAS EN TEXTO, NO IMAGEN) -->
+        <div class="signatures-section">
+            <p>Dado en Bogotá D.C., el 7 de Diciembre de 2001</p>
+            
+            <div class="signatures-container">
+                <div>
+                    <div class="signature-line"></div>
+                    <div class="signature-title">Rector</div>
+                    <div>JOSÉ LEONARDO VALENCIA MOLANO</div>
+                    <div>Representante Legal</div>
+                </div>
+                <div>
+                    <div class="signature-line"></div>
+                    <div class="signature-title">Secretaria General</div>
+                    <div>MARÍA ANGÉLICA PACHO CHICA</div>
+                </div>
+            </div>
+            <div class="footer-legal">
+                <p>Tomo 1 - Folio 37 - Registro 2357</p>
+            </div>
         </div>
     </div>
 
